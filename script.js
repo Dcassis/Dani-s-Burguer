@@ -29,7 +29,6 @@ closeModalBtn.addEventListener("click", function(){
   cartModal.style.display = "none"
 })
 
-
 menu.addEventListener("click", function(event){
   // console.log(event.target)
   let parentButton = event.target.closest(".add-to-cart-btn")
@@ -39,9 +38,7 @@ menu.addEventListener("click", function(event){
     const price = parseFloat(parentButton.getAttribute("data-price"))
     addToCart(name, price)
   }
-
 })
-
 
 // Função para adicionar no carrinho
 function addToCart(name, price){
@@ -58,22 +55,20 @@ function addToCart(name, price){
       price,
       quantity: 1,
     })
-
   }
-
   updateCartModal()
-
 }
 
-
 //Atualiza o carrinho
-function updateCartModal(){
+
+function updateCartModal() {
   cartItemsContainer.innerHTML = "";
   let total = 0;
+  let quantidadeTotalProdutos = 0; // Nova variável para contar a quantidade de produtos
 
   cart.forEach(item => {
     const cartItemElement = document.createElement("div");
-    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
     cartItemElement.innerHTML = `
       <div class="flex items-center justify-between">
@@ -82,30 +77,25 @@ function updateCartModal(){
           <p>Qtd: ${item.quantity}</p>
           <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
         </div>
-
-
         <button class="remove-from-cart-btn" data-name="${item.name}">
           Remover
         </button>
-
       </div>
-    `
+    `;
 
     total += item.price * item.quantity;
+    quantidadeTotalProdutos += item.quantity; // Adiciona a quantidade do item ao total de produtos
 
-    cartItemsContainer.appendChild(cartItemElement)
-
-  })
+    cartItemsContainer.appendChild(cartItemElement);
+  });
 
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
   });
 
-  cartCounter.innerHTML = cart.length;
-
+  cartCounter.innerHTML = quantidadeTotalProdutos; // Atualiza o contador para mostrar a quantidade total de produtos
 }
-
 
 // Função para remover o item do carrinho
 cartItemsContainer.addEventListener("click", function (event){
@@ -114,7 +104,6 @@ cartItemsContainer.addEventListener("click", function (event){
 
     removeItemCart(name);
   }
-
 })
 
 function removeItemCart(name){
@@ -136,7 +125,6 @@ function removeItemCart(name){
 
 }
 
-
 addressInput.addEventListener("input", function(event){
   let inputValue = event.target.value;
 
@@ -144,16 +132,13 @@ addressInput.addEventListener("input", function(event){
     addressInput.classList.remove("border-red-500")
     addressWarn.classList.add("hidden")
   }
-
-
 })
 
-
 // Finalizar pedido
-checkoutBtn.addEventListener("click", function(){
+checkoutBtn.addEventListener("click", function () {
 
   const isOpen = checkRestaurantOpen();
-  if(!isOpen){
+  if (!isOpen) {
 
     Toastify({
       text: "Ops o restaurante está fechado!",
@@ -170,30 +155,43 @@ checkoutBtn.addEventListener("click", function(){
     return;
   }
 
-  if(cart.length === 0) return;
-  if(addressInput.value === ""){
+  if (cart.length === 0) return;
+  if (addressInput.value === "") {
     addressWarn.classList.remove("hidden")
     addressInput.classList.add("border-red-500")
     return;
   }
-
-  //Enviar o pedido para api whats
-  const cartItems = cart.map((item) => {
-    return (
-      ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-    )
-  }).join("")
-
-  const message = encodeURIComponent(cartItems)
-  const phone = "+5579999333944"
-
-  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
-
-  cart = [];
-  updateCartModal();
-
 })
 
+  //Enviar o pedido para api whats
+//   const cartItems = cart.map((item) => {
+//     return (
+//       ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+//     )
+//   }).join("")
+
+//   const message = encodeURIComponent(cartItems)
+//   const phone = "+5579999333944"
+
+//   window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+
+//   cart = [];
+//   updateCartModal();
+// })
+
+  const cartItems = cart.map((item) => {
+  return `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)} |`;
+}).join("");
+
+let valorTotalPedido = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+const message = encodeURIComponent(`Pedido: ${cartItems}Valor Total: R$${valorTotalPedido.toFixed(2)} Endereço: ${addressInput.value}`);
+const phone = "+5579999333944";
+
+window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+cart = [];
+updateCartModal();
 
 // Verificar a hora e manipular o card horario
 function checkRestaurantOpen(){
@@ -212,5 +210,5 @@ if(isOpen){
   spanItem.classList.add("bg-green-600")
 }else{
   spanItem.classList.remove("bg-green-600")
-  spanItem.classList.add("bg-red-500")
-}
+    spanItem.classList.add("bg-red-500")
+  }

@@ -29,7 +29,7 @@
 <body>
   
   <!-- HEADER -->
-  <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+  <header class="w-full h-[420px] bg-zinc-600 bg-home bg-cover bg-center">
     <div class="w-full h-full flex flex-col justify-center items-center">
       <img 
         src="./assets/LogoDaniBurguer.JPG"
@@ -45,245 +45,250 @@
       <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
         <span class="text-white font-medium">Seg à Dom - 18:00 às 22:00</span>
       </div>
-
     </div>
   </header>
   <!-- FIM HEADER -->
   
-  <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-    Conheça o nosso menu
-  </h2>
+  <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+    Conheça o Nosso Menu
+  </h1>
+   <div class="mx-auto max-w-7xl px-2 my-2 border-t-8 border-gray-600 bg-orange-300">
+      <h2 class="font-bold text-3xl text-center py-4">
+        Hambúrgueres
+      </h2>
+    </div>
 
+  
   <!-- INICIO MENU -->
   <div id="menu">
     
     <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
+      
+        <!-- PRODUTO ITEM -->
+        <div class="flex gap-2">
+          <img 
           src="./assets/hamb-1.png"
           alt="Sabor Carioca"
           class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Sabor Carioca</p>
-          <p class="text-sm">Picanha, queijo coalho, molho de alho poró, farofa de bacon.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 27.90</p>
-            <button 
+          />
+          
+          <div class="flex-grow">
+            <p class="font-bold">Sabor Carioca</p>
+            <p class="text-sm">Picanha, queijo coalho, molho de alho poró, farofa de bacon.</p>
+            
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 27.90</p>
+              <button 
               class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
               data-name="Sabor Carioca"
               data-price="27.90"
-            >
+              >
               <i class="fa fa-cart-plus text-lg text-white"></i>
             </button>
           </div>
-
+          
         </div>
-
+        
       </div>
       <!-- FIM PRODUTO ITEM -->
-
+      
       <!-- PRODUTO ITEM -->
       <div class="flex gap-2">
         <img 
-          src="./assets/hamb-2.png"
-          alt="Amazônia Gourmet"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        src="./assets/hamb-2.png"
+        alt="Amazônia Gourmet"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
         />
-
+        
         <div class="flex-grow">
           <p class="font-bold">Amazônia Gourmet</p>
           <p class="text-sm">Carne bovina, queijo do reino, abacaxi caramelizado, folhas de jambu.</p>
-
+          
           <div class="flex items-center gap-2 justify-between mt-3">
             <p class="font-bold text-lg">R$ 29.90</p>
             <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Amazônia Gourmet"
-              data-price="29.90"
+            class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+            data-name="Amazônia Gourmet"
+            data-price="29.90"
             >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
         </div>
-
+        
       </div>
-      <!-- FIM PRODUTO ITEM -->
-
-
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-3.png"
-          alt="Nordestino Apimentado"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Nordestino Apimentado</p>
-          <p class="text-sm">Carne de sol, queijo de coalho, vinagrete de coentro, maionese de pimenta.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 26.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Nordestino Apimentado"
-              data-price="26.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
+      
+    </div>
+    <!-- FIM PRODUTO ITEM -->
+    
+    
+    <!-- PRODUTO ITEM -->
+    <div class="flex gap-2">
+      <img 
+      src="./assets/hamb-3.png"
+      alt="Nordestino Apimentado"
+      class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+      
+      <div class="flex-grow">
+        <p class="font-bold">Nordestino Apimentado</p>
+        <p class="text-sm">Carne de sol, queijo de coalho, vinagrete de coentro, maionese de pimenta.</p>
+        
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 26.90</p>
+          <button 
+          class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+          data-name="Nordestino Apimentado"
+          data-price="26.90"
+          >
+          <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
       </div>
-      <!-- FIM PRODUTO ITEM -->      
+      
+    </div>
+    
+  </div>
+  <!-- FIM PRODUTO ITEM -->      
+  
+  <!-- PRODUTO ITEM -->
+  <div class="flex gap-2">
+    <img 
+    src="./assets/hamb-4.png"
+    alt="Gaúcho Barbecue"
+    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+    />
+    
+    <div class="flex-grow">
+      <p class="font-bold">Gaúcho Barbecue</p>
+      <p class="text-sm">Costela, cheddar, cebola crispy, molho barbecue.</p>
+      
+      <div class="flex items-center gap-2 justify-between mt-3">
+        <p class="font-bold text-lg">R$ 28.90</p>
+        <button 
+        class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+        data-name="Gaúcho Barbecue"
+        data-price="28.90"
+        >
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </div>
+    
+  </div>
+  
+</div>
+<!-- FIM PRODUTO ITEM -->  
+<!-- PRODUTO ITEM -->
+<div class="flex gap-2">
+  <img 
+  src="./assets/hamb-5.png"
+  alt="Capixaba da Gema"
+  class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+  />
+  
+  <div class="flex-grow">
+    <p class="font-bold">Capixaba da Gema</p>
+    <p class="text-sm">Moqueca, requeijão de bufala, alface, tomate, molho de urucum.</p>
+    
+    <div class="flex items-center gap-2 justify-between mt-3">
+      <p class="font-bold text-lg">R$ 30.90</p>
+      <button 
+      class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+      data-name="Capixaba da Gema"
+      data-price="30.90"
+      >
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </div>
+  
+</div>
 
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-4.png"
-          alt="Gaúcho Barbecue"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
+</div>
+<!-- FIM PRODUTO ITEM -->  
+<!-- PRODUTO ITEM -->
+<div class="flex gap-2">
+  <img 
+  src="./assets/hamb-6.png"
+  alt="Mineirinho Uai"
+  class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+  />
+  
+  <div class="flex-grow">
+    <p class="font-bold">Mineirinho Uai</p>
+    <p class="text-sm">Pernil, queijo minas, couve frita, geleia de pimenta.</p>
+    
+    <div class="flex items-center gap-2 justify-between mt-3">
+      <p class="font-bold text-lg">R$ 25.90</p>
+      <button 
+      class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+      data-name="Mineirinho Uai"
+      data-price="25.90"
+      >
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </div>
+  
+</div>
 
-        <div class="flex-grow">
-          <p class="font-bold">Gaúcho Barbecue</p>
-          <p class="text-sm">Costela, cheddar, cebola crispy, molho barbecue.</p>
+</div>
+<!-- FIM PRODUTO ITEM -->  
+<!-- PRODUTO ITEM -->
+<div class="flex gap-2">
+  <img 
+  src="./assets/hamb-7.png"
+  alt="Paulista Chic"
+  class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+  />
+  
+  <div class="flex-grow">
+    <p class="font-bold">Paulista Chic</p>
+    <p class="text-sm">Fraldinha, queijo brie, rúcula, tomate seco, maionese de manjericão.</p>
+    
+    <div class="flex items-center gap-2 justify-between mt-3">
+      <p class="font-bold text-lg">R$ 31.90</p>
+      <button 
+      class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+      data-name="Paulista Chic"
+      data-price="31.90"
+      >
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </div>
+  
+</div>
 
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 28.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Gaúcho Barbecue"
-              data-price="28.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
+</div>
+<!-- FIM PRODUTO ITEM -->  
+<!-- PRODUTO ITEM -->
+<div class="flex gap-2">
+  <img 
+  src="./assets/hamb-8.png"
+  alt="Tropicaliente"
+  class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+  />
+  
+  <div class="flex-grow">
+    <p class="font-bold">Tropicaliente</p>
+    <p class="text-sm">Frango, queijo prato, salada tropical, molho de iogurte com hortelã.</p>
+    
+    <div class="flex items-center gap-2 justify-between mt-3">
+      <p class="font-bold text-lg">R$ 24.90</p>
+      <button 
+      class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+      data-name="Tropicaliente"
+      data-price="24.90"
+      >
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </div>
+  
+</div>
 
-        </div>
-
-      </div>
-      <!-- FIM PRODUTO ITEM -->  
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-5.png"
-          alt="Capixaba da Gema"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Capixaba da Gema</p>
-          <p class="text-sm">Moqueca, requeijão de bufala, alface, tomate, molho de urucum.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 30.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Capixaba da Gema"
-              data-price="30.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- FIM PRODUTO ITEM -->  
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-6.png"
-          alt="Mineirinho Uai"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Mineirinho Uai</p>
-          <p class="text-sm">Pernil, queijo minas, couve frita, geleia de pimenta.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 25.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Mineirinho Uai"
-              data-price="25.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- FIM PRODUTO ITEM -->  
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-7.png"
-          alt="Paulista Chic"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Paulista Chic</p>
-          <p class="text-sm">Fraldinha, queijo brie, rúcula, tomate seco, maionese de manjericão.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 31.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Paulista Chic"
-              data-price="31.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- FIM PRODUTO ITEM -->  
-      <!-- PRODUTO ITEM -->
-      <div class="flex gap-2">
-        <img 
-          src="./assets/hamb-8.png"
-          alt="Tropicaliente"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        />
-
-        <div class="flex-grow">
-          <p class="font-bold">Tropicaliente</p>
-          <p class="text-sm">Frango, queijo prato, salada tropical, molho de iogurte com hortelã.</p>
-
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 24.90</p>
-            <button 
-              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Tropicaliente"
-              data-price="24.90"
-            >
-              <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- FIM PRODUTO ITEM -->  
+</div>
+<!-- FIM PRODUTO ITEM -->  
 
     </main>
 
-    <div class="mx-auto max-w-7xl px-2 my-2">
-      <h2 class="font-bold text-3xl text-center">
+    <div class="mx-auto max-w-7xl px-2 my-2 border-t-8 border-gray-600 bg-orange-200">
+      <h2 class="font-bold text-3xl text-center py-4">
         Bebidas
       </h2>
     </div>
@@ -322,19 +327,19 @@
       <div class="flex gap-2 w-full">
         <img 
           src="./assets/refri-2.png"
-          alt="Cerveja Budweiser lata"
+          alt="Guarana lata"
           class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
         />
 
         <div class="w-full">
-          <p class="font-bold">Cerveja Budweiser lata</p>
+          <p class="font-bold">Guaraná lata</p>
 
           <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 10</p>
+            <p class="font-bold text-lg">R$ 6</p>
             <button 
               class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-              data-name="Cerveja Budweiser lata"
-              data-price="10"
+              data-name="Guaraná lata"
+              data-price="6"
             >
               <i class="fa fa-cart-plus text-lg text-white"></i>
             </button>
@@ -343,11 +348,57 @@
         </div>
 
       </div>
-      <!-- FIM BEBIDA ITEM -->         
+      <!-- FIM BEBIDA ITEM -->     
       <!-- BEBIDA ITEM -->
       <div class="flex gap-2 w-full">
         <img 
-          src="./assets/cerveja-1.jpeg"
+          src="./assets/sucolaranja.webp"
+          alt="Suco de laranja"
+          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+        <div class="w-full">
+          <p class="font-bold">Suco de laranja</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 12</p>
+            <button 
+              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+              data-name="Suco laranja"
+              data-price="12"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM BEBIDA ITEM -->      
+      <!-- BEBIDA ITEM -->
+      <div class="flex gap-2 w-full">
+        <img 
+          src="./assets/agua.png"
+          alt="Água mineral"
+          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
+        <div class="w-full">
+          <p class="font-bold">Água mineral</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5</p>
+            <button 
+              class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+              data-name="Água mineral"
+              data-price="5"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- FIM BEBIDA ITEM -->      
+      <!-- BEBIDA ITEM -->
+      <div class="flex gap-2 w-full">
+        <img 
+          src="./assets/CERVEJA-HEINEKEN-LATA-350ML.png"
           alt="Cerveja Heineken lata"
           class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
         />
@@ -373,7 +424,7 @@
       <!-- BEBIDA ITEM -->
       <div class="flex gap-2 w-full">
         <img 
-          src="./assets/cerveja-2.jpeg"
+          src="./assets/Budweiser-269ml.png"
           alt="Cerveja Budwiser"
           class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
         />
@@ -382,12 +433,12 @@
           <p class="font-bold">Cerveja Budwiser</p>
 
           <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 6</p>
+            <p class="font-bold text-lg">R$ 10</p>
             <button 
               class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
               data-name="Guarana lata"
-              data-price="6"
-            >
+              data-price="10"
+            > 
               <i class="fa fa-cart-plus text-lg text-white"></i>
             </button>
           </div>
@@ -400,74 +451,122 @@
     </div>
     <!-- FIM GRID BEBIDAS -->
 
-     <div class="mx-auto max-w-7xl px-2 my-2">
-      <h2 class="font-bold text-3xl text-center">
+    <!--INÍCIO DO GRID DE SOBREMESSAS-->
+    <div class="mx-auto max-w-7xl px-2 my-2 border-t-8 border-gray-600 bg-orange-100">
+      <h2 class="font-bold text-3xl text-center py-4">
         Sobremesas
       </h2>
     </div>
-
-    <!-- GRID SOBREMESASS -->
+    
+    <!-- GRID SOBREMESAS -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+      
+      <!-- SOBREMESA ITEM -->
+      <div class="flex gap-2 w-full">
+        <img 
+        src="./assets/Sorvete-com-acompanhamentos-1.png"
+        alt="Sorvete"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+        />
         
-      <!-- SOBREMESA ITEM -->
-        <div class="flex gap-2 w-full">
-          <img 
-            src="./assets/sorvete.jpeg"
-            alt="Sorvete"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-          />
-  
-          <div class="w-full">
-            <p class="font-bold">Sorvete</p>
-  
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 16</p>
-              <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-                data-name="Sorvete"
-                data-price="16"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-  
-          </div>
-  
+        <div class="w-full">
+          <p class="font-bold">Sorvete</p>
+          
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 16</p>
+            <button 
+            class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+            data-name="Sorvete"
+            data-price="16"
+            >
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
         </div>
-        <!-- FIM SOBREMESA ITEM --> 
-      <!-- SOBREMESA ITEM -->
-        <div class="flex gap-2 w-full">
-          <img 
-            src="./assets/mousse chocolate.jpeg"
-            alt="Mousse de Chocolate"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-          />
-  
-          <div class="w-full">
-            <p class="font-bold">Mousse de Chocolate</p>
-  
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 14</p>
-              <button 
-                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
-                data-name="Mousse de Chocolate"
-                data-price="14"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-  
-          </div>
-  
-        </div>
-        <!-- FIM SOBREMESA ITEM --> 
+      </div>
+    </div>
+    <!-- FIM SOBREMESA ITEM -->
+    <!-- SOBREMESA ITEM -->
+    <div class="flex gap-2 w-full">
+      <img 
+      src="./assets/petit-gateau-dessert-png.webp"
+      alt="Petit-Gateau"
+      class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+      
+      <div class="w-full">
+        <p class="font-bold">Petit-Gateau</p>
+        
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 25</p>
+          <button 
+          class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+          data-name="Petit-Gateau"
+          data-price="25"
+          >
+          <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+      </div>
+    </div>
+    </div>
+    <!-- FIM SOBREMESA ITEM --> 
+    <!-- SOBREMESA ITEM -->
+    <div class="flex gap-2 w-full">
+      <img 
+      src="./assets/mousse.png"
+      alt="Mousse de Chocolate"
+      class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+      
+      <div class="w-full">
+        <p class="font-bold">Mousse de Chocolate</p>
+        
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 14</p>
+          <button 
+          class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+          data-name="Mousse de Chocolate"
+          data-price="14"
+          >
+          <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+      </div>
+    </div>
+    </div>
+    <!-- FIM SOBREMESA ITEM --> 
+    <!-- SOBREMESA ITEM -->
+    <div class="flex gap-2 w-full">
+      <img 
+      src="./assets/pudim-png.webp"
+      alt="Pudim"
+      class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+      
+      <div class="w-full">
+        <p class="font-bold">Pudim</p>
+        
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 15</p>
+          <button 
+          class="bg-gray-900 px-5 rounded add-to-cart-btn hover:opacity-90"
+          data-name="Pudim"
+          data-price="15"
+          >
+          <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+      </div>
+      
+    </div>
 
-  </div>
-  <!-- FIM MENU -->
+    </div>
+    <!-- FIM SOBREMESA ITEM --> 
+<!--FIM DO GRID DE SOBREMESSAS-->
 
-  <!-- MODAL CART -->
-  <div 
-    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+</div>
+<!-- FIM MENU -->
+
+<!-- MODAL CART -->
+<div 
+class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
     id="cart-modal"
   >
 
