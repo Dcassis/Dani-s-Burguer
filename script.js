@@ -49,7 +49,6 @@ function addToCart(name, price){
    existingItem.quantity += 1;
 
   }else{
-
     cart.push({
       name,
       price,
@@ -75,7 +74,7 @@ function updateCartModal() {
         <div>
           <p class="font-medium">${item.name}</p>
           <p>Qtd: ${item.quantity}</p>
-          <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+          <p class="font-medium mt-2"> R$ ${item.price.toFixed(2)}</p>
         </div>
         <button class="remove-from-cart-btn" data-name="${item.name}">
           Remover
@@ -120,9 +119,7 @@ function removeItemCart(name){
 
     cart.splice(index, 1);
     updateCartModal();
-
   }
-
 }
 
 addressInput.addEventListener("input", function(event){
@@ -161,37 +158,25 @@ checkoutBtn.addEventListener("click", function () {
     addressInput.classList.add("border-red-500")
     return;
   }
-})
+
 
   //Enviar o pedido para api whats
-//   const cartItems = cart.map((item) => {
-//     return (
-//       ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-//     )
-//   }).join("")
-
-//   const message = encodeURIComponent(cartItems)
-//   const phone = "+5579999333944"
-
-//   window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
-
-//   cart = [];
-//   updateCartModal();
-// })
-
   const cartItems = cart.map((item) => {
-  return `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)} |`;
-}).join("");
+    return (
+      `    [   ${item.name} | Quantidade: (${item.quantity}) | Preço: R$${item.price}   ]     `
+    )
+  }).join("")
+  let valorTotalPedido = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-let valorTotalPedido = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const message = encodeURIComponent(`Pedido: ${cartItems} |     | Valor Total: R$${valorTotalPedido.toFixed(2)} |     | Endereço: ${addressInput.value}`);
+  
+  const phone = "+5579999333944"
 
-const message = encodeURIComponent(`Pedido: ${cartItems}Valor Total: R$${valorTotalPedido.toFixed(2)} Endereço: ${addressInput.value}`);
-const phone = "+5579999333944";
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
 
-window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-
-cart = [];
-updateCartModal();
+  cart = [];
+  updateCartModal();
+})
 
 // Verificar a hora e manipular o card horario
 function checkRestaurantOpen(){
